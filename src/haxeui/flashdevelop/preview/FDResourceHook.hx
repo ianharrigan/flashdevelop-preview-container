@@ -35,7 +35,35 @@ class FDResourceHook implements IResourceHook {
 			bmp.unlock();
 			return bmp;
 		} catch (e:Dynamic) {
-			trace("ERROR getting bitmap: " + e);
+			trace("Problem getting bitmap in haxe hook: " + e);
+		}
+		return null;
+	}
+	
+	public function getText(resourceId:String, locale:String = null):String {
+		try {
+			var resultString:String = ExternalInterface.call("getText", resourceId);
+			if (resultString == null) {
+				return null;
+			}
+			return resultString;
+		} catch (e:Dynamic) {
+			trace("Problem getting text in haxe hook: " + e);
+		}
+		return null;
+	}
+	
+	public function getBytes(resourceId:String, locale:String = null):ByteArray {
+		try {
+			var resultString:String = ExternalInterface.call("getBytes", resourceId);
+			if (resultString == null) {
+				return null;
+			}
+			var bytes:Bytes = Base64.decode(resultString);
+			var ba:ByteArray = bytes.getData();
+			return ba;
+		} catch (e:Dynamic) {
+			trace("Problem getting bytes in haxe hook: " + e);
 		}
 		return null;
 	}
