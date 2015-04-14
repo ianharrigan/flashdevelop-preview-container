@@ -39,12 +39,14 @@
 		<assets path="assets" rename="assets" />
 		<assets path="assets/css" rename="css" />
 		<assets path="assets/ui" rename="ui" />
+		<assets path="assets/img" rename="img" />
 	</section>
 	<!-- embedded resources, inside final output -->
 	<section if="haxeui-embed-resources">
 		<assets path="assets" rename="assets" embed="true" />
 		<assets path="assets/css" rename="css" embed="true" />
 		<assets path="assets/ui" rename="ui" embed="true" />
+		<assets path="assets/img" rename="img" embed="true" />
 	</section>
 	
 	<!-- optimize output

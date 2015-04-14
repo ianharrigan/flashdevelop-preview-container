@@ -2,6 +2,7 @@ package haxeui.flashdevelop.preview;
 
 import haxe.ui.toolkit.core.Root;
 import haxe.ui.toolkit.core.Toolkit;
+import haxe.ui.toolkit.resources.ResourceManager;
 import haxe.ui.toolkit.themes.GradientTheme;
 import openfl.external.ExternalInterface;
 
@@ -19,11 +20,12 @@ class Main {
 					_main.updateLayout(layoutString);
 				});
 				
+				ResourceManager.instance.resourceHook = new FDResourceHook();
+				
 				ExternalInterface.call("callbacksReady");
 			} catch (e:Dynamic) {
 				trace("ERROR: " + e);
 			}
-
 			
 			root.addChild(_main.view);
 		});

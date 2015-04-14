@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <project version="2">
   <!-- Output SWF options -->
   <output>
@@ -15,19 +15,29 @@
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
+    <class path="C:\Servers\Haxe\haxe\lib\haxeui\1,7,11" />
+    <class path="C:\Servers\Haxe\haxe\lib\hscript\2,0,4" />
+    <class path="C:\Servers\Haxe\haxe\lib\svg\1,0,8" />
+    <class path="C:\Servers\Haxe\haxe\lib\lime\2,3,1" />
+    <class path="C:\Servers\Haxe\haxe\lib\actuate\1,8,3" />
+    <class path="C:\Servers\Haxe\haxe\lib\yagp\1,1,4" />
+    <class path="C:\Servers\Haxe\haxe\lib\openfl\3,0,1" />
     <class path="src" />
+    <class path="assets" />
+    <class path="bin\flash\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="" />
+    <option directives="haxeui=1.7.11&#xA;hscript=2.0.4&#xA;svg=1.0.8&#xA;lime=2.3.1&#xA;actuate=1.8.3&#xA;yagp=1.1.4&#xA;openfl=3.0.1&#xA;openfl-next&#xA;tools=2.3.1&#xA;no-compilation&#xA;openfl-flash&#xA;web" />
     <option flashStrict="False" />
-    <option mainClass="haxeui.flashdevelop.preview.Main" />
+    <option noInlineOnDebug="False" />
+    <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="" />  
+    <option additional="-swf-version 11.2" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
-    <library name="haxeui" />
+    <!-- example: <library name="..." /> -->
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
