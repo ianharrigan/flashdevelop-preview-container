@@ -19,8 +19,8 @@ class MainController extends XMLController {
 			main.addChild(r);
 			
 			var spacer:Spacer = new Spacer();
-			spacer.height = 25;
-			main.addChild(spacer);
+			//spacer.height = 25;
+			//main.addChild(spacer);
 		} catch (ex:Dynamic) {
 			trace("Error: " + ex);
 		}
